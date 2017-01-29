@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+	<div class="container">
+	{% include "home/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
+	<br>
+    {{ page.noticias|richtext }}
+    <br>
+	
+	{{ page.body|richtext }}
+
+	<hr style="color: black; border-color: black;">
+	<br>
+
+
+    {% include "home/includes/streamfield.html" with content=self.videos %}
+    
+    
+    </div>
+{% endblock %}

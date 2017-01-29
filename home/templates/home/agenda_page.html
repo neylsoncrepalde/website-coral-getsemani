@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-agendapage{% endblock %}
+
+{% block heading %}
+  <div class="page-header">
+
+    <div class="pull-right">
+      {% for tag in self.tags.all %}
+        <a href="{% pageurl self.blog_index %}?tag={{ tag }}"
+           class="btn btn-primary btn-xs">
+          <i class="glyphicon glyphicon-tag"></i> {{ tag }}
+        </a>
+      {% endfor %}
+    </div>
+
+    <h2>
+      {{ self.title }}
+      {% if self.date %}<small>{{ self.date }}</small>{% endif %}
+    </h2>
+
+  </div>
+{% endblock %}
+
+
+{% block content %}
+	<div class="container">
+	<div class="page-header">
+    
+    
+        <div class="row">
+        <div class="col-xs-6 col-sm-2"></div>
+        <div class="col-xs-6 col-sm-8">
+        <h2><strong>{{ page.title }}</strong></h2></div>
+        </div>
+
+        <div class="row">
+        <div class="col-xs-6 col-sm-2"></div>
+        <div class="col-xs-6 col-sm-4"><h4>{{ page.intro|richtext }}</h4></div>
+        <div class="col-xs-6 col-sm-4" align="center"><h4><strong>{{ page.date }}</strong></h4></div>
+        </div>
+  </div>
+
+        <div class="row">
+          <div class="col-xs-6 col-sm-2"></div>
+          <div class="col-xs-6 col-sm-8">{{ page.body|richtext }}</div>
+        </div>
+
+
+        <div class="row">
+        <div class="col-xs-6 col-sm-2"></div>
+        <div class="col-xs-6 col-sm-4">{{ page.local|richtext }}</div>
+        <div class="col-xs-6 col-sm-4">{{ page.mapa }}</div>
+        </div>
+        <br>
+
+    <p align="center"><a href="{{ page.get_parent.url }}" class="btn btn-primary outline" role="button">Voltar à Agenda</a></p>
+    </div>
+
+{% endblock %}

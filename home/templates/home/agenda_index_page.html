@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-agendaindexpage{% endblock %}
+
+{% block content %}
+	<div class="container">
+	<div class="jumbotron">
+	<div class="page-header">
+    <h1>{{ page.title }}</h1>
+
+    {% include "home/includes/intro.html" with intro=self.intro only %}
+    </div>
+    </div>
+
+    {% for evento in eventos %}
+        {% with evento=evento.specific %}
+        <div class="row">
+        <div class="col-xs-6 col-sm-2"></div>
+        <div class="col-xs-6 col-sm-8">
+        <h2><strong>{{ evento.title }}</strong></h2></div>
+        </div>
+
+        <div class="row">
+        <div class="col-xs-6 col-sm-2"></div>
+        <div class="col-xs-6 col-sm-4"><h4>{{ evento.intro|richtext }}</h4></div>
+        <div class="col-xs-6 col-sm-4" align="center"><h4><strong>{{ evento.date }}</strong></h4></div>
+        </div>
+
+        <div class="row">
+        <div class="col-xs-6 col-sm-2"></div>
+        <div class="col-xs-6 col-sm-4">{{ evento.local|richtext }}</div>
+        <div class="col-xs-6 col-sm-4" align="center">
+
+
+        <a href="{% pageurl evento %}" class="btn btn-primary btn-large outline" role="button">Saiba Mais</a></div>
+        </div>
+
+        <div class="row">
+        <div class="col-xs-6 col-sm-2"></div>
+        <div class="col-xs-6 col-sm-8"><hr class="agenda-line"></div>
+        </div>
+
+        
+        
+
+    {% include "home/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
+
+        </div>
+    </div>
+    <br>
+    
+        {% endwith %}
+	{% endfor %}
+	<br>
+    <br>
+    </div>
+
+{% endblock %}

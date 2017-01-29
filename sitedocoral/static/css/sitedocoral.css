@@ -1,0 +1,199 @@
+.img-circle {
+	border-radius: 50%
+}
+body {
+      position: relative; 
+  }
+
+  a {
+    color: #333;
+
+}
+
+
+.navbar {
+  background: #0C0C0C;
+  border-bottom: 4px #ba9c43 solid;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand {
+    color: white;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: white;
+    background-color: #ba9c43;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: white;
+}
+
+.navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.thumbnail {
+    width: 360px;
+    height: 240px;
+}
+
+
+.item-fig {
+  position: relative;  
+  overflow: hidden;
+  width: 360px;
+}
+.item-fig img {
+  max-width: 100%;
+  
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.item-fig:hover img {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+body {
+    font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.footer-content {
+  padding: 20px 0px;
+  background-color: #404040;
+  color: white;
+  border-top: 6px #ba9c43 solid;
+}
+
+.footer-top-content h1, .footer-top-content h2, .footer-top-content h3, .footer-top-content h4, .footer-top-content h5, .footer-top-content h6 {
+    color: #ffffff;
+}
+
+.footer-content a {
+  color: white;
+}
+
+the-icons i {
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.the-icons {
+    list-style-type: none;
+}
+
+.jumbotron {
+  background-color: #BDBDBD;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+  
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  color: #333;
+  background-color: #428bca;
+  border-color: #333;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #333;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/***********************
+  OUTLINE BUTTONS
+************************/
+
+.btn.outline {
+    background: #333;
+    padding: 12px 22px;
+}
+.btn-primary.outline {
+    border: 2px solid white;
+    color: white;
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: white;
+    border-color: white;
+    background-color: #ba9c43;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: white;
+    color: white;
+    box-shadow: none;
+    background-color: #ba9c43;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.agenda-line {
+  color: #333;
+  border-color: #333;
+}
+
+.blog-line {
+  color: #333;
+  border-color: #333;
+}
